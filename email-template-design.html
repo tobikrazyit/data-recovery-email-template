@@ -36,6 +36,43 @@
 				letter-spacing: 0.2px;
 				color: #f56413;
 			}
+
+			/* -----------------
+			media queries
+			-------------------- */
+			@media (max-width: 400px) {
+				.nav-container {
+					display: block;
+				}
+			}
+			@media (max-width: 778px) {
+				.custom-container {
+					padding: 0 20px !important;
+				}
+				.footer-padding {
+					padding: 37px 20px 28px !important;
+				}
+				.banner-image {
+					width: 100%;
+				}
+				.other-services-container {
+					width: 100%;
+				}
+				.title {
+					text-align: center !important;
+				}
+				.footer-upper {
+					display: block !important;
+					justify-content: center;
+					text-align: center;
+				}
+				.footer-logo {
+					width: 100%;
+					display: flex !important;
+					justify-content: center !important;
+					align-items: center !important;
+				}
+			}
 		</style>
 	</head>
 	<body
@@ -49,7 +86,7 @@
 			font-family: sans-serif;
 		"
 	>
-		<div style="max-width: 800px; width: 100%">
+		<div style="max-width: 100%; width: 100%">
 			<!------------------- Navbar starts here ---------------------->
 			<table style="width: 100%">
 				<tr>
@@ -81,11 +118,18 @@
 
 			<!-------------------- banner starts here ------------------------>
 			<table
-				style="width: 100%; padding: 0px 50px; background: #ff7b004d"
+				class="custom-container"
+				style="
+					width: 100%;
+					padding: 0px 50px;
+					background: #ff7b004d;
+					margin-top: -1px;
+				"
 			>
 				<tr>
 					<td>
 						<h1
+							class="title"
 							style="
 								font-size: 50px;
 								font-weight: 700;
@@ -99,6 +143,7 @@
 							Book Now <span style="color: #f56413">10% off</span>
 						</h1>
 						<h1
+							class="title"
 							style="
 								font-size: 56px;
 								font-weight: 300;
@@ -111,7 +156,7 @@
 							<span
 								style="
 									font-size: 56px;
-									font-weight: 300;
+									font-weight: 700;
 									line-height: 68px;
 									text-align: center;
 									color: #f56413;
@@ -121,6 +166,7 @@
 							>
 						</h1>
 						<h1
+							class="title"
 							style="
 								font-size: 50px;
 								line-height: 60px;
@@ -145,6 +191,7 @@
 								<td>
 									<a style="margin-bottom: 0" href="#">
 										<img
+											class="banner-image"
 											src="images/banner-image.png"
 											alt="banner image"
 											width="612px"
@@ -201,9 +248,10 @@
 				<tr>
 					<td>
 						<table
+							class="other-services-container"
 							style="
 								background-color: #384860;
-								width: 672px;
+								max-width: 672px;
 								border-radius: 8px;
 								border: 1px solid #4f627d;
 								padding: 28px;
@@ -245,6 +293,7 @@
 
 			<!-------------------- footer starts here -------------------->
 			<table
+				class="footer-padding"
 				style="
 					width: 100%;
 					padding: 37px 50px 28px;
@@ -252,16 +301,23 @@
 				"
 			>
 				<tr>
-					<td style="display: flex; gap: 18px">
-						<table>
+					<td
+						class="footer-upper"
+						style="
+							display: flex;
+							justify-content: space-between;
+							gap: 18px;
+						"
+					>
+						<table class="footer-logo">
 							<tr>
 								<td>
-									<a href="#">
+									<div>
 										<img
 											src="images/footer-logo.png"
 											alt="footer logo"
 										/>
-									</a>
+									</div>
 								</td>
 							</tr>
 						</table>
